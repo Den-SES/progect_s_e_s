@@ -1,0 +1,155 @@
+{
+  "main": [
+    {
+      "name": "Услуги",
+      "url": "/uslugi"
+    },
+    {
+      "name": "Дезинсекция",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Насекомые",
+          "url": "/uslugi/unichtozhenie-nasekomih"
+        },
+
+        {
+          "name": "Тараканы",
+          "url": "/uslugi/unichtozhenie-tarakanov"
+        },
+
+        {
+          "name": "Клопы",
+          "url": "/uslugi/unichtozhenie-klopov"
+        },
+
+        {
+          "name": "Клещи",
+          "url": "/uslugi/unichtozhenie-kleshchej"
+        },
+
+        {
+          "name": "Муравьи",
+          "url": "/uslugi/unichtozhenie-muravev"
+        },
+
+        {
+          "name": "Шершни",
+          "url": "/uslugi/unichtozhenie-shershnej"
+        },
+
+        {
+          "name": "Осы",
+          "url": "/uslugi/unichtozhenie-os"
+        },
+
+        {
+          "name": "Блохи",
+          "url": "/uslugi/unichtozhenie-bloh"
+        },
+
+        {
+          "name": "Вши и Гниды",
+          "url": "/uslugi/obrabotka-ot-pedikuleza"
+        },
+
+        {
+          "name": "Долгоносики",
+          "url": "/uslugi/unichtozhenie-dolgonosika"
+        },
+
+        {
+          "name": "Короеды",
+          "url": "/uslugi/unichtozhenie-koroeda"
+        },
+
+        {
+          "name": "Медведки",
+          "url": "/uslugi/unichtozhenie-medvedok"
+        },
+
+        {
+          "name": "Моль",
+          "url": "/uslugi/unichtozhenie-moli"
+        },
+
+        {
+          "name": "Мокрицы и чешуйницы",
+          "url": "/uslugi/unichtozhenie-mokric-i-cheshujnic"
+        },
+
+        {
+          "name": "Мухи",
+          "url": "/uslugi/unichtozhenie-muh"
+        },
+
+        {
+          "name": "Кожееды",
+          "url": "/uslugi/unichtozhenie-kozheeda"
+        },
+
+        {
+          "name": "Пауки",
+          "url": "/uslugi/unichtozhenie-paukov"
+        }
+      ]
+    },
+    {
+      "name": "Дератизация",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Кроты",
+          "url": "/uslugi/unichtozhenie-krotov"
+        },
+
+        {
+          "name": "Крысы",
+          "url": "/uslugi/unichtozhenie-krys"
+        },
+
+        {
+          "name": "Мыши",
+          "url": "/uslugi/unichtozhenie-myshej"
+        }
+      ]
+    },
+    {
+      "name": "Обработка деревьев",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Обрезка и удаление",
+          "url": "/uslugi/obrezka-derevev"
+        },
+
+        {
+          "name": "Стволовые инъекции",
+          "url": "/uslugi/stvolovye-inekcii"
+        }
+      ]
+    },
+    {
+      "name": "О нас",
+      "url": "/about"
+    }
+  ],
+
+  "footer": [
+    {
+      "name": "Дезинсекция",
+      "url": "/uslugi/unichtozhenie-nasekomih"
+    },
+    {
+      "name": "Дератизация",
+      "url": "/uslugi/unichtozhenie-grizunov"
+    },
+    {
+      "name": "Все услуги",
+      "url": "/uslugi"
+    }
+  ]
+}

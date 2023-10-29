@@ -1,0 +1,52 @@
+{
+  "site": {
+    "title": "Санэпидстанция в Москве: Городская Служба Дезинфекции | Официальный Сайт СЭС МСК",
+    "base_url": "https://sesmsk.su",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.webp",
+    "logo": "/images/logo.webp",
+    "logo_width": "70",
+    "logo_height": "70",
+    "logo_text": "СЭС-МСК"
+  },
+
+  "metadata": {
+    "meta_author": "СЭС МСК",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Официальная санэпидемслужба в Москве СЭС МСК: устраним проблему с первого раза и гарантированно избавим от вредителей"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 100,
+    "blog_folder": "blog"
+  },
+
+  "call_to_action": {
+    "title": "Специалисты санэпидемстанции Москвы",
+    "description": "Помогаем гос.учреждениям, коммерческим организациям и частным лицам в борьбе с вредителями",
+    "button": {
+      "label": "Напиишите нам",
+      "link": "/contact"
+    }
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "ses-msk-templatу",
+    "settings": {}
+  },
+
+  "params": {
+    "email": "sesmsk.su@ya.ru",
+    "location": "",
+    "phone": "+7-916-159-37-44",
+    "telegram_bot_token": "6735512239:AAEaEX6NrSZWIUaY0z-B-30sJRX78-KKFAo",
+    "chat_id": "-1002004060031",
+    "soobshchenie_otpravleno": "/soobshchenie-otpravleno",
+    "otzyv_otpravlen": "/otzyv-otpravlen",
+    "zayavka_otpravlena": "/zayavka-otpravlena",
+    "copyright": "Не является публичной офертой | СЭС МСК © 2023 | Разработка [kryukovs.ru](https://kryukovs.ru)"
+  }
+}

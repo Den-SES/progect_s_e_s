@@ -1,0 +1,40 @@
+---
+import Base from "@layouts/Base.astro";
+import Banner from "@layouts/components/Banner.astro";
+import KeyServices from "@layouts/components/KeyServices.astro";
+import Testimonial from "@layouts/components/Testimonial.astro";
+import Service from "@layouts/components/Service.astro";
+import OurClients from "@components/about/OurClients.astro";
+import Cta from "@layouts/partials/Cta.astro";
+import { getEntryBySlug } from "astro:content";
+import CounterComponent from "@components/about/CounterComponent.astro";
+
+const about = await getEntryBySlug("about", "index");
+const { counter } = about.data;
+const homepage = await getEntryBySlug("homepage", "index");
+const { banner, key_services, service, testimonial, clients } = homepage.data;
+---
+
+<Base>
+  <!-- banner -->
+  <Banner banner={banner} />
+  <KeyServices key_services={key_services} />
+  <section class="my-8 mt-24">
+    <div class="container">
+      <div class="mx-auto text-center lg:max-w-3xl">
+        <h2>Почему выбирают именно нас</h2>
+        <p class="mt-4">
+          Наши сотрудники ведут успешную борьбу с вредителями с 2012 года. Вот
+          некоторые цифры, отражающие эффективность нашей команды:
+        </p>
+      </div>
+      <CounterComponent counter={counter} />
+    </div>
+  </section>
+  <Service service={service} />
+  <Testimonial testimonial={testimonial} />
+
+  <OurClients clients={clients} />
+  <!-- call to action -->
+  <Cta />
+</Base>

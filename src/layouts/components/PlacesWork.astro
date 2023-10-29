@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+const { place } = Astro.props;
+const { title, description, place_list } = place;
+---
+
+{
+  place && (
+    <section class="my-8 mt-24">
+      <div class="container">
+        <div class="row ">
+          <div class="mx-auto text-center lg:col-8">
+            <h2>{title}</h2>
+            <p class="mt-4">{description}</p>
+          </div>
+        </div>
+        <div class="m-1 mb-24 mt-14 text-center">
+          {place_list.map((item: any) => (
+            <div class="m-1 inline-block rounded-xl bg-white px-4 py-2 shadow-lg lg:m-2">
+              <div class="flex items-center space-x-2">
+                <div class="icon rounded-full bg-[#EDF7F3] px-2 py-1">
+                  <Icon class="inline h-5 w-5" name={item.icon} />
+                </div>
+                <h3 class="text-sm lg:text-lg">{item.title}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

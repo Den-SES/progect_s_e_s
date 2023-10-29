@@ -1,0 +1,109 @@
+---
+import VideoComponent from "@layouts/function-components/VideoComponent";
+import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+const { service } = Astro.props;
+const { title, description, our_service } = service;
+---
+
+<section class="my-8 mt-24">
+  <div class="container">
+    <div class="mx-auto mb-8 text-center lg:max-w-3xl">
+      <h2>Профессиональные методы обработки {title}</h2>
+      <p class="mt-4">{description}</p>
+    </div>
+    {
+      our_service.map((item: any, index: number) => (
+        <div class="gx-5 my-5 row items-center lg:mt-0">
+          <div class={`lg:col-7 ${index % 2 === 0 ? "order-0" : "order-1"}`}>
+            {item.image && (
+              <div class="relative">
+                <Image
+                  class="w-full object-contain rounded-xl"
+                  alt="service"
+                  width={670}
+                  height={450}
+                  src={item.image}
+                />
+              </div>
+            )}
+            {item.video && (
+              <VideoComponent
+                client:load
+                src={item.video.thumbnail}
+                height={370}
+                width={700}
+                title={item.title}
+                video_id={item.video.video_id}
+                video_width="w-[700px]"
+                video_height="h-[370px]"
+              />
+            )}
+          </div>
+          <div
+            class={`mt-6 lg:col-5 lg:mt-0 ${
+              index % 2 === 0 ? "order-1" : "order-0"
+            }`}
+          >
+            <div class={`${index % 2 === 0 ? "ml-4" : "mr-4"}`}>
+              <h2 class="lg:text-2xl lg:mt-8 mb-6">{item.title}</h2>
+              {item.description && <p class="my-4">{item.description}</p>}
+              {item.principle_operation && (
+                <p class="font-bold my-2">Принцип действия:</p>
+                <p>{item.principle_operation}</p>
+                )}
+              {item.advantages_list && (
+                <p class="my-3 font-bold">Преимущества метода:</p>
+                <ul class="text-dark lg:-ml-4">
+                  {item.advantages_list &&
+                  item.advantages_list.map((list: any) => (
+                    <li class="flex items-center rounded px-4">
+                      <Icon
+                        class="w-6 h-6 mr-3 text-primary"
+                        name="icons8:plus"
+                      />
+                      {list}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {item.disadvantages_list && (
+                <p class="my-3 font-bold">Недостатки метода:</p>
+                <ul class="text-dark lg:-ml-4">
+                  {item.disadvantages_list &&
+                  item.disadvantages_list.map((negativelist: any) => (
+                    <li class="flex items-center rounded px-4">
+                      <Icon
+                        class="w-5 h-5 mr-3 text-secondary"
+                        name="icons8:minus"
+                      />
+                      {negativelist}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {item.button && item.button.enable && (
+                <a class="btn btn-white mt-6" href={item.button.link}>
+                  {item.button.label}
+                </a>
+              )}
+              <ul class="mt-6 text-dark lg:-ml-4">
+                {item.list &&
+                  item.list.map((list: any) => (
+                    <li class="mb-2 flex items-center rounded px-4">
+                      <Icon
+                        class="w-5 h-5 mr-3 text-primary"
+                        name="ic:round-check"
+                      />
+                      {list}
+                    </li>
+                  ))}
+              </ul>
+              {item.price && <div class="mt-6 text-primary text-lg lg:text-2xl">{item.price}</div>}
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

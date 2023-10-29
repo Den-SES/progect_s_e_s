@@ -1,0 +1,63 @@
+---
+import PageHeader from "@components/PageHeader.astro";
+import Base from "@layouts/Base.astro";
+import Cta from "@layouts/partials/Cta.astro";
+import { getEntryBySlug } from "astro:content";
+import ServicePosts from "@layouts/function-components/ServicePosts";
+import { getSinglePage } from "@lib/contentParser.astro";
+import { getTaxonomy } from "@lib/taxonomyParser.astro";
+const uslugiIndex = await getEntryBySlug<any, string>("uslugi", "-index");
+const { our_services, basic_services, image } = uslugiIndex.data;
+const categories = await getTaxonomy("uslugi", "categories");
+const serviceposts = await getSinglePage("uslugi");
+const page_data = {
+  title: uslugiIndex.data.title,
+  page_title: uslugiIndex.data.page_title,
+  content: uslugiIndex.body,
+};
+---
+
+<Base
+  title={uslugiIndex.data.title}
+  meta_title={uslugiIndex.data.meta_title}
+  description={uslugiIndex.data.description}
+  image={uslugiIndex.data.image}
+>
+  <section class="page-hero pb-14 pt-16">
+    <div class="container">
+      <PageHeader page_data={page_data} />
+      <div class="col-12 mt-14">
+        <div class="relative">
+          <img
+            src={image}
+            alt="Профессиональная дезинсекция"
+            height={532}
+            width={1044}
+            class="w-full rounded"
+          />
+          <img
+            class="absolute -left-[8%] bottom-[12%] z-[-1] hidden h-20 w-20 lg:-bottom-0 lg:-left-28 lg:block lg:h-[150px] lg:w-[150px]"
+            src="/images/obrabotka-ot-vreditelej.webp"
+            alt="Санитарная обработка помещений"
+            height={100}
+            width={100}
+          />
+          <img
+            class="absolute -bottom-4 -right-16 z-[-1] hidden h-[134px] w-[80px] lg:block"
+            src="/images/protivogaz.webp"
+            width={80}
+            height={134}
+            alt="услуги санэпидемстанции"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <ServicePosts
+    client:load
+    categories={categories}
+    our_services={our_services}
+    posts={serviceposts}
+  />
+  <Cta />
+</Base>

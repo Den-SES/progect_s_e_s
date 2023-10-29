@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/*
+Disallow: /policy
+Disallow: /soobshchenie-otpravleno
+Disallow: /otzyv-otpravlen
+Disallow: /zayavka-otpravlena

@@ -1,0 +1,43 @@
+---
+import { markdownify } from "@lib/utils/textConverter";
+import "animate.css";
+import MyForm from "./MyForm.astro";
+const { banner } = Astro.props;
+const { title, image, content } = banner;
+---
+
+<section class="section banner relative">
+  <div class="container">
+    <div class="row items-center">
+      <div class="lg:col-6">
+        <h1
+          class="banner-title animate__animated animate__headShake"
+          set:html={markdownify(title)}
+        />
+
+        <p class="mt-6 text-xl" set:html={markdownify(content)} />
+        <p class="my-8 text-lg font-semibold">
+          Проконсультируем вас бесплатно:
+        </p>
+        <MyForm form_name="Главная - баннер" />
+      </div>
+      <div class="flex justify-center lg:col-6">
+        <img
+          class="animate__animated animate__fadeIn w-full object-contain"
+          alt="banner"
+          src={image}
+          width={577}
+          height={577}
+        />
+      </div>
+    </div>
+  </div>
+
+  <img
+    class="banner-shape invisible absolute -top-28 right-0 -z-[1] w-full max-w-[55%] xl:visible"
+    alt="banner"
+    src="/images/bg-home-start.webp"
+    width={1142}
+    height={761}
+  />
+</section>
