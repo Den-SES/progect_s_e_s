@@ -16,14 +16,12 @@ place:
   title: Помощь СЭС в профессиональной обработке от кротов
   description: комплекс мероприятий по борьбе с кротами на любом участке
   place_list:
-    - title: в частном доме
-      icon: tabler:home
+    - title: на участке
+      icon: uil:trees
     - title: на даче
       icon: iconoir:farm
     - title: в огороде
       icon: maki:wetland
-    - title: на участке
-      icon: uil:trees
     - title: в саду
       icon: healthicons:forest-outline
 
@@ -95,7 +93,7 @@ steps:
     - title: Готово!
 
 costServices:
-  title: Примерная стоимость обработки квартиры или дома от кротов
+  title: Примерная стоимость обработки участка от кротов
   description: Итоговая цена за услугу по уничтожению кротов изменяется в зависимости от конкретного объекта. Окончательную стоимость можно будет уточнить после визита специалиста.
   cols: "md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4"
   cost_services_list:
