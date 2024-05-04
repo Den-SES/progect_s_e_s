@@ -44,6 +44,7 @@ function ContactForm({ onSubmit }) {
           value={formData.name}
           onChange={handleInputChange}
           placeholder="Ваше имя"
+          required
         />
       </div>
       <div className="form-group mb-5">
@@ -57,6 +58,7 @@ function ContactForm({ onSubmit }) {
           value={formData.email}
           onChange={handleInputChange}
           placeholder="адрес вашей почты"
+          required
         />
       </div>
       <div className="form-group mb-5">
