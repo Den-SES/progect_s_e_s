@@ -214,6 +214,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"kak-izbavitsya-ot-krotov-na-uchastke.mdx": {
+	id: "kak-izbavitsya-ot-krotov-na-uchastke.mdx";
+  slug: "kak-izbavitsya-ot-krotov-na-uchastke";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "kak-podgotovit-pomeshchenie-k-dezinsekcii.mdx": {
 	id: "kak-podgotovit-pomeshchenie-k-dezinsekcii.mdx";
   slug: "kak-podgotovit-pomeshchenie-k-dezinsekcii";
