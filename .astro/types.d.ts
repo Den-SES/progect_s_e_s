@@ -214,6 +214,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"hody-i-nory-krotov.mdx": {
+	id: "hody-i-nory-krotov.mdx";
+  slug: "hody-i-nory-krotov";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "kak-izbavitsya-ot-krotov-na-uchastke.mdx": {
 	id: "kak-izbavitsya-ot-krotov-na-uchastke.mdx";
   slug: "kak-izbavitsya-ot-krotov-na-uchastke";
@@ -224,6 +231,20 @@ declare module 'astro:content' {
 "kak-podgotovit-pomeshchenie-k-dezinsekcii.mdx": {
 	id: "kak-podgotovit-pomeshchenie-k-dezinsekcii.mdx";
   slug: "kak-podgotovit-pomeshchenie-k-dezinsekcii";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"mogut-li-klopy-perejti-ot-sosedej.mdx": {
+	id: "mogut-li-klopy-perejti-ot-sosedej.mdx";
+  slug: "mogut-li-klopy-perejti-ot-sosedej";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"vred-i-polza-ot-krota-v-ogorode.mdx": {
+	id: "vred-i-polza-ot-krota-v-ogorode.mdx";
+  slug: "vred-i-polza-ot-krota-v-ogorode";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
